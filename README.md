@@ -200,7 +200,6 @@ http://localhost:3000
 
 **Name:** *Varun S Terdal*
 **Course:** B.E / B.Tech
-**Semester:** 6th
 **Batch:** A2
 **Subject:** Web Technologies
 
