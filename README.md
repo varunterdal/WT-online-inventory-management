@@ -1,70 +1,215 @@
-# Getting Started with Create React App
+# 📦 Online Inventory Management System (MERN Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Project Overview
 
-## Available Scripts
+This project is a **web-based Online Inventory Management System** developed using the **MERN Stack (MongoDB, Express.js, ReactJS, Node.js)**.
 
-In the project directory, you can run:
+It helps a retail store or organization to:
 
-### `npm start`
+* Manage products
+* Track stock quantity
+* Calculate total inventory value
+* Perform basic inventory operations through a simple UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is designed at **Day-0 level**, keeping the code **very easy, readable, and beginner-friendly**, while still following **real-world industry practices**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🎯 Objectives
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* To understand **full-stack web development** using MERN
+* To implement **CRUD operations**
+* To connect **React frontend with MongoDB backend**
+* To build a **real-life inventory management use case**
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏗️ System Architecture
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1️⃣ Frontend (ReactJS)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Displays all products in **table format**
+* Allows staff to:
 
-### `npm run eject`
+  * Add new products
+  * Update stock quantity
+* Shows:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  * Product Name
+  * Category
+  * Price
+  * Quantity
+* Calculates **Total Inventory Value**
+* Simple and clean UI (White + Light Blue theme)
+* Communicates with backend using **REST APIs**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2️⃣ Backend (Node.js + Express.js)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Provides REST APIs:
 
-## Learn More
+* `GET /products` → Fetch all products
+* `POST /product/add` → Add a new product
+* `PUT /product/update/:id` → Update product quantity
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Validation Rules:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Quantity cannot be negative
+* Required fields must be filled
+* Default category and price handled safely
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3️⃣ Database (MongoDB)
 
-### Analyzing the Bundle Size
+Stores:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Product ID
+* Product Name
+* Category
+* Price
+* Quantity
 
-### Making a Progressive Web App
+MongoDB is connected using **Mongoose**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🧩 React Component Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Component           | Description             |
+| ------------------- | ----------------------- |
+| App                 | Main component & layout |
+| ProductForm         | Add new products        |
+| ProductList         | Display all products    |
+| ProductCard / Table | Show product details    |
+| Login               | Simple authentication   |
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🔐 Authentication (Basic)
 
-### `npm run build` fails to minify
+* Email must end with: `@kletech.ac.in`
+* Password: `12345`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*(Added for academic demonstration purpose)*
+
+---
+
+## 🔄 Application Workflow
+
+1. React app loads
+2. Products are fetched from backend
+3. Backend retrieves data from MongoDB
+4. Products are displayed dynamically
+5. User adds or updates stock
+6. Database updates instantly
+7. UI refreshes **without page reload**
+
+---
+
+## 🛠️ Technologies Used
+
+* **Frontend:** ReactJS, CSS
+* **Backend:** Node.js, Express.js
+* **Database:** MongoDB, Mongoose
+* **Tools:** VS Code, MongoDB Compass, GitHub
+
+---
+
+## ▶️ How to Run the Project
+
+### 🔹 Prerequisites
+
+* Node.js installed
+* MongoDB installed (offline or Compass)
+* VS Code
+
+---
+
+### 🔹 Backend Setup
+
+```bash
+cd backend
+npm install
+node server.js
+```
+
+Expected output:
+
+```
+Server running on port 5000
+MongoDB connected
+```
+
+---
+
+### 🔹 Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+Open browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📊 Features Implemented
+
+✅ Add products
+✅ Update stock quantity
+✅ Prevent negative stock
+✅ Table view of inventory
+✅ Total inventory value calculation
+✅ MongoDB data persistence
+✅ Simple authentication
+✅ Beginner-friendly UI
+
+---
+
+## 📈 Real-Life Enhancements (Future Scope)
+
+* Role-based login (Admin / Staff)
+* Barcode scanning
+* Supplier management
+* Stock alerts (Low stock)
+* Sales & purchase history
+* Cloud deployment
+
+---
+
+## 📚 Academic Relevance
+
+* Covers **WT + MERN Stack syllabus**
+* Suitable for:
+
+  * Lab submission
+  * Case study
+  * Mini project
+  * Viva & internal assessment
+
+---
+
+## 👨‍💻 Developed By
+
+**Name:** *Varun S Terdal*
+**Course:** B.E / B.Tech
+**Semester:** 6th
+**Batch:** A2
+**Subject:** Web Technologies
+
+---
+
+## ⭐ Conclusion
+
+This project demonstrates how **ReactJS frontend**, **Node-Express backend**, and **MongoDB database** work together to build a real-world inventory system.
+The focus is on **clarity, simplicity, and practical understanding**.
+
+---
+
