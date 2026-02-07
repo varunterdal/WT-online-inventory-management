@@ -1,0 +1,100 @@
+/* General page */
+body {
+  background-color: #e6f2ff; /* very light blue */
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1 {
+  color: #0078d7; /* Skype-blue-ish */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #005a9e; /* darker blue for section headings */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Inputs and select dropdowns */
+input, select {
+  padding: 7px 10px;
+  margin: 5px;
+  border: 1px solid #0078d7;
+  border-radius: 5px;
+  outline: none;
+  width: 200px;
+  transition: all 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #005a9e;
+  box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+}
+
+/* Buttons */
+button {
+  padding: 7px 15px;
+  margin: 5px;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #005a9e;
+}
+
+/* Product Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #cce6ff; /* light blue header */
+  color: #005a9e;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f9ff; /* alternating light row */
+}
+
+/* Error and success messages */
+p {
+  font-size: 14px;
+}
+
+p.error {
+  color: #d9534f; /* red-ish */
+}
+
+p.success {
+  color: #28a745; /* green */
+}
+
+/* Container for forms */
+.form-container {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
